@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dlewis_MapGPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9a-sD-uC7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nim-d0-Fq1">
+                                <rect key="frame" x="66.666666666666686" y="769" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="ENh-1u-6Hx"/>
+                                    <constraint firstAttribute="height" constant="29" id="e4P-mR-jDz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="zoomInOutMap:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tl0-ob-ieg"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-C8-St2">
+                                <rect key="frame" x="16" y="79" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2Z7-nY-wj3"/>
+                                    <constraint firstAttribute="width" constant="47" id="EzF-TI-PSp"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeMapType:" destination="BYZ-38-t0r" eventType="valueChanged" id="qdd-md-2Vy"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x9a-sD-uC7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AeU-2E-xJk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x9a-sD-uC7" secondAttribute="trailing" id="HLu-jS-9N7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x9a-sD-uC7" secondAttribute="bottom" id="KSe-cl-hWh"/>
+                            <constraint firstItem="Nim-d0-Fq1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ok4-rO-prC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nim-d0-Fq1" secondAttribute="bottom" constant="20" id="YN8-xm-rDf"/>
+                            <constraint firstItem="zAe-C8-St2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="eR6-i6-tsc"/>
+                            <constraint firstItem="zAe-C8-St2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ymj-Gz-PD6"/>
+                            <constraint firstItem="x9a-sD-uC7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zaZ-cp-uKe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapSwitch" destination="zAe-C8-St2" id="VjF-Nu-4L9"/>
+                        <outlet property="myMap" destination="x9a-sD-uC7" id="YvL-pi-lKt"/>
+                        <outlet property="zoomSlider" destination="Nim-d0-Fq1" id="0n8-kv-yAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
