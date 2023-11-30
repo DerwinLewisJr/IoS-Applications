@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dlewis_proj4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-kz-EAR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-gG-fBr">
+                                <rect key="frame" x="129" y="108.99999999999999" width="135" height="62.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="9il-nO-Unw"/>
+                                    <constraint firstAttribute="height" constant="62.329999999999998" id="Vhs-RR-gZ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pal-xo-CBO">
+                                <rect key="frame" x="0.0" y="221.33333333333334" width="393" height="47.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="xzd-0d-YF1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZTB-kz-EAR" secondAttribute="bottom" id="CWG-rh-7gi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pal-xo-CBO" secondAttribute="trailing" id="Pdl-Oe-kh7"/>
+                            <constraint firstItem="Z9P-gG-fBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="S6x-Zk-JYK"/>
+                            <constraint firstItem="Z9P-gG-fBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xml-Pv-V1y"/>
+                            <constraint firstItem="pal-xo-CBO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cnD-bz-cT7"/>
+                            <constraint firstItem="ZTB-kz-EAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eIR-MN-UPG"/>
+                            <constraint firstItem="pal-xo-CBO" firstAttribute="top" secondItem="Z9P-gG-fBr" secondAttribute="bottom" constant="50" id="eh3-pk-8Zg"/>
+                            <constraint firstItem="ZTB-kz-EAR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="grc-mr-bzW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZTB-kz-EAR" secondAttribute="trailing" id="kVo-PN-e6X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pilotWord" destination="pal-xo-CBO" id="Gb3-Hf-n9W"/>
+                        <outlet property="userInput" destination="Z9P-gG-fBr" id="EGT-D3-E7G"/>
+                        <outletCollection property="pilotWord" destination="pal-xo-CBO" collectionClass="NSMutableArray" id="CPE-Ew-ghC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane.jpeg" width="1000" height="1619"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
